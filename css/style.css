@@ -1,0 +1,224 @@
+:root{
+    --primary: #9c27b0;
+    --drak-primary: #89119d;
+    --secundary: #fece00;
+    --dark-secundary: #e9bb02;
+    --white: #fff;
+    --black: #000;
+
+    --main-font: 'staatliches',cursive;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+/* Globals */
+body{
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    color: var(--white);
+
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,h2,h3{
+    font-family: var(--main-font);
+    color: var(--dark-secundary);
+    text-align: center;
+}
+
+h1{
+    font-size: 4rem;
+    letter-spacing: 0.1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+h2{
+    font-size: 3.2rem;
+    margin-top: 5rem;
+
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+/* BEM metodology */
+header{
+
+}
+
+.main-name{
+    font-size: 4rem;
+    text-align: center;
+    font-family: var(--main-font);
+    letter-spacing: 0.1rem;
+}
+
+.navigation{
+    background-color: var(--drak-primary);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0.5rem;
+
+}
+
+.navigation__link{
+    color: var(--white);
+    font-family: var(--main-font);
+    font-size: 3rem;
+}
+
+.navigation__link--on,
+.navigation__link:hover{
+    color: var(--secundary);
+}
+
+/* Footer */
+.footer_text{
+    background-color: var(--drak-primary);
+    text-align: center;
+    font-family: var(--main-font);
+    padding: 1.5rem;
+}
+
+.product{
+    background-color: var(--drak-primary);
+}
+
+.product__image{
+    width: 100%;
+    padding: 1rem;
+}
+
+.product__information{
+
+}
+
+.product__name{
+    font-size: 4rem;
+}
+
+.product__price{
+    font-size: 3rem;
+}
+
+.product__price,
+.product__name{
+    font-size: 4rem;
+    font-family: var(--main-font);
+    text-align: center;
+    color: var(--white);
+    margin: 1rem 0;
+}
+
+/* Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Graphics */
+.graphic{
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 30rem;
+    grid-column: 1 / 3;
+}
+
+.graphic--shirt{
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+
+}
+
+.graphic--node{
+    grid-row: 8 / 9;
+    background-image: url(../img/grafico2.jpg);
+}
+
+@media (min-width: 768px){
+    .graphic--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+/* About */
+.about{
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+}
+
+@media (min-width: 768px){
+    .about{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.about__content{
+
+}
+
+.about__image{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+@media (min-width:768px){
+    .about__image{
+        grid-column: 2/3;
+    }
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+@media (min-width: 768px){
+    .card{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card__tittle{
+    margin-top: -2rem;
+    margin-bottom: -1rem;
+}
+.card__image{
+    width: 100%;
+}
+
+.card__child{
+    text-align: center;
+}
+
